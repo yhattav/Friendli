@@ -98,11 +98,13 @@ function makeProgressCircle(id,percent) {
 day.animate(percent);  // Number from 0.0 to 1.0
 }
 
-window.onload = function shagadelic() {
+$(document).ready(function () { 
     makeProgressCircle('container',0.8);
     for (i=1;i<6;i++) {
        makeProgressLine('progress' + i,i*0.2); 
     }
     
 
-};
+});
+
+//window.onload = function shagadelic() {

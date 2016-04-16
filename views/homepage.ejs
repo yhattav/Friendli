@@ -5,13 +5,12 @@
         </div>
         <div class="col-md-6">
             MAINPAGER
-            
-            <div class="progress" id="progress"></div>
+            <% for (i=1;i<6;i++) { %>
+            <div style="position: relative; padding: 30px;">
+            <div class="progress" id='progress<%= i%>'></div>
+            </div>
+            <% } %>
             <div class="container" id="container"></div>
-
-
-
-
 
         </div>
         <div class="col-md-3">

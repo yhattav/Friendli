@@ -27,9 +27,9 @@ progress(64,$('#progressBar'));
     }
 });
 */
-
-window.onload = function onLoad() {
- var bar = new ProgressBar.Line('#progress', {
+function makeProgressLine(id,percent) {     
+ itemz = document.getElementById(id);
+ var bar = new ProgressBar.Line(itemz, {
   strokeWidth: 4,
   easing: 'easeInOut',
   duration: 1400,
@@ -59,44 +59,50 @@ window.onload = function onLoad() {
   }
 });
 
-bar.animate(0.53);
-    
-//};
+bar.animate(percent);
+}   
 
-// bar.path.setAttribute('stroke', state.color);
+function makeProgressCircle(id,percent) {     
+    itemz = document.getElementById(id);
+    var day = new ProgressBar.Circle(itemz, {
+    color: '#aaa',
+    // This has to be the same size as the maximum width to
+    // prevent clipping
+    strokeWidth: 4,
+    trailWidth: 1,
+    easing: 'easeInOut',
+    duration: 1400,
+    text: {
+        autoStyleContainer: false
+    },
+    from: { color: '#f0f', width: 1 },
+    to: { color: '#333', width: 4 },
+    // Set default step function for all animate calls
+    step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.path.setAttribute('stroke-width', state.width);
 
-//window.onload = function onLoad() {
-var day = new ProgressBar.Circle('#container', {
-  color: '#aaa',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
-  strokeWidth: 4,
-  trailWidth: 1,
-  easing: 'easeInOut',
-  duration: 1400,
-  text: {
-    autoStyleContainer: false
-  },
-  from: { color: '#f0f', width: 1 },
-  to: { color: '#333', width: 4 },
-  // Set default step function for all animate calls
-  step: function(state, circle) {
-    circle.path.setAttribute('stroke', state.color);
-    circle.path.setAttribute('stroke-width', state.width);
+        var value = Math.round(circle.value() * 100);
+        if (value === 0) {
+        circle.setText('');
+        } else {
+        circle.setText(value);
+        console.log(value);
+        }
 
-    var value = Math.round(circle.value() * 100);
-    if (value === 0) {
-      circle.setText('');
-    } else {
-      circle.setText(value);
-      console.log(value);
     }
-
-  }
-});
+    });
 //day.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 //day.text.style.fontSize = '2rem';
 
-day.animate(0.64);  // Number from 0.0 to 1.0
+day.animate(percent);  // Number from 0.0 to 1.0
+}
+
+window.onload = function shagadelic() {
+    makeProgressCircle('container',0.8);
+    for (i=1;i<6;i++) {
+       makeProgressLine('progress' + i,i*0.2); 
+    }
+    
 
 };

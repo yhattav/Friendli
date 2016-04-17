@@ -1,0 +1,49 @@
+2016-04-17T15:37:27.754405+00:00 app[web.1]: { [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+2016-04-17T15:37:27.754406+00:00 app[web.1]:   message: 'connect ECONNREFUSED 127.0.0.1:27017' }]
+2016-04-17T15:37:27.754406+00:00 app[web.1]:   originalError: 
+2016-04-17T15:37:27.754405+00:00 app[web.1]:     at emitTwo (events.js:100:13) { [Error: Failed to connect to MongoDB.  Are you sure your configured Mongo instance is running?
+2016-04-17T15:37:27.754407+00:00 app[web.1]:    { [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+2016-04-17T15:37:27.754407+00:00 app[web.1]:      name: 'MongoError',
+2016-04-17T15:37:27.754407+00:00 app[web.1]:      message: 'connect ECONNREFUSED 127.0.0.1:27017' } }
+2016-04-17T15:37:27.237191+00:00 app[web.1]: designed for a production environment, as it will leak
+2016-04-17T15:37:27.237192+00:00 app[web.1]: memory, and will not scale past a single process.
+2016-04-17T15:37:53.548548+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2016-04-17T15:37:53.548548+00:00 heroku[web.1]: Stopping process with SIGKILL
+2016-04-17T15:37:54.282198+00:00 heroku[web.1]: Process exited with status 137
+2016-04-17T15:38:24.228864+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2016-04-17T15:38:24.228864+00:00 heroku[web.1]: Stopping process with SIGKILL
+2016-04-17T15:38:25.032768+00:00 heroku[web.1]: Process exited with status 22
+2016-04-17T15:38:25.061431+00:00 heroku[web.1]: State changed from starting to crashed
+2016-04-17T15:38:25.062612+00:00 heroku[web.1]: State changed from crashed to starting
+2016-04-17T15:38:30.119356+00:00 heroku[web.1]: Starting process with command `npm start`
+2016-04-17T15:38:32.492022+00:00 app[web.1]: 
+2016-04-17T15:38:32.492040+00:00 app[web.1]: > Bootstrap@0.0.0 start /app
+2016-04-17T15:38:33.717239+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2016-04-17T15:38:33.717282+00:00 app[web.1]: designed for a production environment, as it will leak
+2016-04-17T15:38:34.052991+00:00 app[web.1]: A hook (`orm`) failed to load!
+2016-04-17T15:38:34.058106+00:00 app[web.1]: Error: Failed to connect to MongoDB.  Are you sure your configured Mongo instance is running?
+2016-04-17T15:38:34.058130+00:00 app[web.1]:     at g (events.js:273:16)
+2016-04-17T15:38:34.058132+00:00 app[web.1]:  Error details:
+2016-04-17T15:38:34.058133+00:00 app[web.1]:   message: 'connect ECONNREFUSED 127.0.0.1:27017' }]
+2016-04-17T15:38:34.058133+00:00 app[web.1]:   name: 'MongoError',
+2016-04-17T15:38:34.058134+00:00 app[web.1]:   originalError: 
+2016-04-17T15:38:34.058134+00:00 app[web.1]:    { [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+2016-04-17T15:38:34.058135+00:00 app[web.1]:      name: 'MongoError',
+2016-04-17T15:38:34.058135+00:00 app[web.1]:      message: 'connect ECONNREFUSED 127.0.0.1:27017' } }
+2016-04-17T15:39:30.585245+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2016-04-17T15:39:30.585245+00:00 heroku[web.1]: Stopping process with SIGKILL
+2016-04-17T15:39:31.413046+00:00 heroku[web.1]: Process exited with status 137
+2016-04-17T15:38:34.058132+00:00 app[web.1]:  Error details:
+2016-04-17T15:38:34.058133+00:00 app[web.1]:   name: 'MongoError',
+2016-04-17T15:38:34.058134+00:00 app[web.1]:   originalError: 
+2016-04-17T15:38:34.058134+00:00 app[web.1]:    { [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+2016-04-17T15:39:30.585245+00:00 heroku[web.1]: Stopping process with SIGKILL
+2016-04-17T15:39:31.413046+00:00 heroku[web.1]: Process exited with status 137
+2016-04-17T15:38:34.058132+00:00 app[web.1]:  Error details:
+2016-04-17T15:38:34.058133+00:00 app[web.1]:   message: 'connect ECONNREFUSED 127.0.0.1:27017' }]
+2016-04-17T15:38:34.058133+00:00 app[web.1]:   name: 'MongoError',
+2016-04-17T15:38:34.058134+00:00 app[web.1]:   originalError: 
+2016-04-17T15:38:34.058134+00:00 app[web.1]:    { [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+2016-04-17T15:38:34.058135+00:00 app[web.1]:      message: 'connect ECONNREFUSED 127.0.0.1:27017' } }
+2016-04-17T15:39:30.585245+00:00 heroku[web.1]: Stopping process with SIGKILL
+2016-04-17T15:39:31.455636+00:00 heroku[web.1]: State changed from starting to crashed

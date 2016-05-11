@@ -1,32 +1,4 @@
-/*function progress(percent, $element) {
-    var progressBarWidth = percent * $element.width() / 100;
-    $element.find('div').animate({ width: progressBarWidth, backgroundColor: "#00f"}, 500).html(percent + "% ");
-}
-
-progress(64,$('#progressBar'));
-
- $(document).ready(function () {
-    var dataval = parseInt($('.progress').attr("data-amount"));
-    if (dataval < 100) {
-        $('.progress .amount').css("width", 100 - dataval + "%");
-    }
-
-  /*FOR DEMO ONLY
-    $('#increase').click(function () {
-        modifyProgressVal(1);
-    });
-    $('#decrease').click(function () {
-        modifyProgressVal(-1);
-    });
-    function modifyProgressVal(type) {
-        dataval = parseInt($('.progress').attr("data-amount"));
-        if (type == 1) dataval = Math.min(100,dataval + 10)
-        else if (type == -1) dataval = Math.max(0,dataval - 10);
-        $('.progress .amount').css("width", 100 - dataval + "%");
-        $('.progress').attr("data-amount", dataval);
-    }
-});
-*/
+/*
 function makeProgressLine(id,percent) {     
  itemz = document.getElementById(id);
  var bar = new ProgressBar.Line(itemz, {
@@ -97,13 +69,29 @@ function makeProgressCircle(id,percent) {
 
 day.animate(percent);  // Number from 0.0 to 1.0
 }
+*/
 
-$(document).ready(function () { 
-    makeProgressCircle('container',0.8);
-    for (i=1;i<6;i++) {
-       makeProgressLine('progress' + i,i*0.2); 
+
+function makeProgressNoob(id,percent) {
+    var itemz = document.getElementById(id);
+    for (j=1;j<percent;j++) {
+       $(itemz).append("X");
+       console.log('added X');
     }
     
+}
+
+
+$(document).ready(function () { 
+   /* makeProgressCircle('container',0.8);
+    for (i=1;i<6;i++) {
+       makeProgressLine('progress' + i,i*5); 
+    }
+    */
+     for (i=1;i<6;i++) {
+       makeProgressNoob('progress' + i,i*14); 
+       console.log(i);
+    }
 
 });
 

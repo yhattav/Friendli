@@ -11,7 +11,7 @@
     function calcProgress(aDate,aLatest,aDeathtime) {
         var timesince = aDate-aLatest;
         var a = timesince/aDeathtime;
-        if ( a>>1 ) { 
+        if ( a>1 ) { 
             return(1);
             }
             else return(a);
@@ -51,7 +51,7 @@ function makeProgressLine(id,percent) {
   },
   from: {color: '#00ff00'},
   to: {color: '#ED6A5A'},
-  step: (state, bar) => {
+  step: function (state, bar) {
       bar.path.setAttribute('stroke', state.color);
       bar.setText(Math.round(bar.value() * 100) + ' %' );
   }
